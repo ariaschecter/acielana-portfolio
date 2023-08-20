@@ -74,14 +74,6 @@
                             <button class="btn btn-dark block w-full text-center">Sign in</button>
                         </form>
                         <!-- END: Login Form -->
-                        <div
-                            class="md:max-w-[345px] mx-auto font-normal text-slate-500 dark:text-slate-400 mt-12 uppercase text-sm">
-                            Don’t have an account?
-                            <a href="{{ route('register') }}"
-                                class="text-slate-900 dark:text-white font-medium hover:underline">
-                                Sign up
-                            </a>
-                        </div>
                     </div>
                     @include('auth.partials.footer')
                 </div>
