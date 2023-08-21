@@ -57,6 +57,24 @@
                 </ul>
               </li>
 
+              <li class="">
+                <a href="javascript:void(0)" class="navItem">
+                    <span class="flex items-center">
+                        <iconify-icon class="nav-icon" icon="heroicons-outline:user"></iconify-icon>
+                        <span>Experience</span>
+                    </span>
+                  <iconify-icon class="icon-arrow" icon="heroicons-outline:chevron-right"></iconify-icon>
+                </a>
+                <ul class="sidebar-submenu">
+                  <li class="">
+                    <a href="{{ route('admin.experience.index') }}" class="{{ $route == 'admin.experience.index' ? 'active' : '' }}">All Experience</a>
+                  </li>
+                  <li class="">
+                    <a href="{{ route('admin.experience.create') }}" class="{{ $route == 'admin.experience.create' ? 'active' : '' }}">Add Experience</a>
+                  </li>
+                </ul>
+              </li>
+
             <li class="sidebar-menu-title">User</li>
             <li class="">
                 <a href="javascript:void(0)" class="navItem">
