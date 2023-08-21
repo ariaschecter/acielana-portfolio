@@ -39,6 +39,24 @@
                 </a>
             </li>
 
+            <li class="">
+                <a href="javascript:void(0)" class="navItem">
+                    <span class="flex items-center">
+                        <iconify-icon class="nav-icon" icon="heroicons-outline:user"></iconify-icon>
+                        <span>Education</span>
+                    </span>
+                  <iconify-icon class="icon-arrow" icon="heroicons-outline:chevron-right"></iconify-icon>
+                </a>
+                <ul class="sidebar-submenu">
+                  <li class="">
+                    <a href="{{ route('admin.education.index') }}" class="{{ $route == 'admin.education.index' ? 'active' : '' }}">All Education</a>
+                  </li>
+                  <li class="">
+                    <a href="{{ route('admin.education.create') }}" class="{{ $route == 'admin.education.create' ? 'active' : '' }}">Add Education</a>
+                  </li>
+                </ul>
+              </li>
+
             <li class="sidebar-menu-title">User</li>
             <li class="">
                 <a href="javascript:void(0)" class="navItem">
