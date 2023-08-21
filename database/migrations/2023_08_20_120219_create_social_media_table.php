@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('social_media', function (Blueprint $table) {
-            $table->id();
+            $table->uuid('id')->primary();
             $table->string('media_name');
             $table->string('media_url');
             $table->string('media_svg');
