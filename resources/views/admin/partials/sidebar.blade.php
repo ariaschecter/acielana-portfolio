@@ -111,6 +111,24 @@
                 </ul>
               </li>
 
+              <li class="">
+                <a href="javascript:void(0)" class="navItem">
+                    <span class="flex items-center">
+                        <iconify-icon class="nav-icon" icon="heroicons-outline:user"></iconify-icon>
+                        <span>Blog</span>
+                    </span>
+                  <iconify-icon class="icon-arrow" icon="heroicons-outline:chevron-right"></iconify-icon>
+                </a>
+                <ul class="sidebar-submenu">
+                  <li class="">
+                    <a href="{{ route('admin.blog.index') }}" class="{{ $route == 'admin.blog.index' ? 'active' : '' }}">All Blog</a>
+                  </li>
+                  <li class="">
+                    <a href="{{ route('admin.blog.create') }}" class="{{ $route == 'admin.blog.create' ? 'active' : '' }}">Add Blog</a>
+                  </li>
+                </ul>
+              </li>
+
             <li class="sidebar-menu-title">User</li>
             <li class="">
                 <a href="javascript:void(0)" class="navItem">

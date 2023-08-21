@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="{{ asset('backend/css/zabuto_calendar.min.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('backend/css/sidebar-menu.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/css/app.css') }}">
+    <script src="{{ asset('backend/tinymce/tinymce.min.js') }}"></script>
     <!-- END: Theme CSS-->
     <script src="{{ asset('backend/js/settings.js') }}" sync></script>
   </head>
