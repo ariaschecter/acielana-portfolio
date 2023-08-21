@@ -36,6 +36,7 @@
                     <div class="input-area">
                         <label for="experience_desc" class="form-label">Description<span class="text-danger-500">*</span></label>
                         <textarea id="experience_desc" name="experience_desc" rows="5" class="form-control" placeholder="Type Here">{{ $experience->experience_desc }}</textarea>
+                        <x-input-error :messages="$errors->get('experience_desc')" class="mt-2" />
                       </div>
                       <button class="btn inline-flex justify-center btn-dark">Submit</button>
                 </form>

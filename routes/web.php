@@ -4,6 +4,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EducationController;
 use App\Http\Controllers\ExperienceController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SkillController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -41,6 +42,7 @@ Route::middleware('role:admin', 'auth')->prefix('admin')->name('admin.')->group(
 
     Route::resource('education', EducationController::class);
     Route::resource('experience', ExperienceController::class);
+    Route::resource('skill', SkillController::class);
 });
 
 require __DIR__.'/auth.php';

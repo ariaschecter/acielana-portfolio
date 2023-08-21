@@ -75,6 +75,24 @@
                 </ul>
               </li>
 
+              <li class="">
+                <a href="javascript:void(0)" class="navItem">
+                    <span class="flex items-center">
+                        <iconify-icon class="nav-icon" icon="heroicons-outline:user"></iconify-icon>
+                        <span>Skill</span>
+                    </span>
+                  <iconify-icon class="icon-arrow" icon="heroicons-outline:chevron-right"></iconify-icon>
+                </a>
+                <ul class="sidebar-submenu">
+                  <li class="">
+                    <a href="{{ route('admin.skill.index') }}" class="{{ $route == 'admin.skill.index' ? 'active' : '' }}">All Skill</a>
+                  </li>
+                  <li class="">
+                    <a href="{{ route('admin.skill.create') }}" class="{{ $route == 'admin.skill.create' ? 'active' : '' }}">Add Skill</a>
+                  </li>
+                </ul>
+              </li>
+
             <li class="sidebar-menu-title">User</li>
             <li class="">
                 <a href="javascript:void(0)" class="navItem">
