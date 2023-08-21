@@ -93,6 +93,24 @@
                 </ul>
               </li>
 
+              <li class="">
+                <a href="javascript:void(0)" class="navItem">
+                    <span class="flex items-center">
+                        <iconify-icon class="nav-icon" icon="heroicons-outline:user"></iconify-icon>
+                        <span>Project</span>
+                    </span>
+                  <iconify-icon class="icon-arrow" icon="heroicons-outline:chevron-right"></iconify-icon>
+                </a>
+                <ul class="sidebar-submenu">
+                  <li class="">
+                    <a href="{{ route('admin.project.index') }}" class="{{ $route == 'admin.project.index' ? 'active' : '' }}">All Project</a>
+                  </li>
+                  <li class="">
+                    <a href="{{ route('admin.project.create') }}" class="{{ $route == 'admin.project.create' ? 'active' : '' }}">Add Project</a>
+                  </li>
+                </ul>
+              </li>
+
             <li class="sidebar-menu-title">User</li>
             <li class="">
                 <a href="javascript:void(0)" class="navItem">
