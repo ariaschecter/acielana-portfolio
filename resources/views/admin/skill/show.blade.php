@@ -12,10 +12,10 @@
             <div class="card-text h-full ">
                 <form class="space-y-4">
                     <div class="input-area relative">
-                        <label for="skill_name" class="form-label">Experience Name<span
+                        <label for="skill_name" class="form-label">Skill Name<span
                                 class="text-danger-500">*</span></label>
                         <input type="text" id="skill_name" name="skill_name" class="form-control"
-                            placeholder="Enter Experience Name" value="{{ $skill->skill_name }}" readonly>
+                            placeholder="Enter Skill Name" value="{{ $skill->skill_name }}" readonly>
                         <x-input-error :messages="$errors->get('skill_name')" class="mt-2" />
                     </div>
                     <div class="input-area">
