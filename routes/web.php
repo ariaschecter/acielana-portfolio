@@ -4,6 +4,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EducationController;
 use App\Http\Controllers\ExperienceController;
+use App\Http\Controllers\Home\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\SkillController;
@@ -22,18 +23,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home.index');
-});
-
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
 
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+route::controller(HomeController::class)->group( function() {
+    Route::get('/', 'index')->name('home.index');
+});
 
 Route::middleware('auth', 'verified')->controller(DashboardController::class)->group(function () {
     Route::get('/dashboard', 'index')->name('dashboard');
