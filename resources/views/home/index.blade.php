@@ -122,6 +122,10 @@
     </header>
     <!-- Header area end -->
 
+    @if (session()->get('message'))
+        <p>{{ session()->get('message') }}</p>
+    @endif
+
     <!-- Main wrapper start -->
     <main>
         @include('home.partials.home')

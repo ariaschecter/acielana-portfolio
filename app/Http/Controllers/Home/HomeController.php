@@ -48,6 +48,7 @@ class HomeController extends Controller
 
         Contact::create($validated);
 
+
         return redirect('/#contact')->with('message', 'Your Message is Sent Successfully!');
     }
 }
