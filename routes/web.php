@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EducationController;
 use App\Http\Controllers\ExperienceController;
@@ -27,8 +28,9 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
 
-route::controller(HomeController::class)->group( function() {
-    Route::get('/', 'index')->name('home.index');
+route::controller(HomeController::class)->name('home.')->group( function() {
+    Route::get('/', 'index')->name('index');
+    Route::post('/contact', 'contactStore')->name('contact.store');
 });
 
 Route::middleware('auth', 'verified')->controller(DashboardController::class)->group(function () {
@@ -49,6 +51,7 @@ Route::middleware('role:admin', 'auth')->prefix('admin')->name('admin.')->group(
     Route::resource('skill', SkillController::class);
     Route::resource('project', ProjectController::class);
     Route::resource('blog', BlogController::class);
+    Route::resource('contact', ContactController::class)->except('create', 'store', 'show', 'edit', 'update');
 });
 
 require __DIR__.'/auth.php';

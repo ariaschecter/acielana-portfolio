@@ -2,6 +2,9 @@
 <section
 class="bg-cover bg-no-repeat bg-center sm:h-full only-md:h-screen lg:min-h-screen flex justify-center items-center overflow-hidden bg-[url('../images/hero-bg-img.png')] bg-[#DAEEF1] dark:bg-[url('../images/hero-bg-img-dark.png')] dark:bg-dark_primary_bg dark:border-b dark:border-dark_accent1"
 id="home">
+@if (session()->get('message'))
+    <p class="">{{ session()->get('message') }}</p>
+@endif
 <div
     class="container mx-auto flex sm:flex-col items-center justify-center lg:mt-[40px] only-md:mt-[40px] sm:pt-[100px] sm:pb-[70px]">
     <div class="lg:max-w-[40%] sm:max-w-[60%] xs:max-w-[85%] only-md:max-w-[40%] flex justify-end">
