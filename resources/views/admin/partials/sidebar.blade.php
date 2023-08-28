@@ -128,6 +128,14 @@
                   </li>
                 </ul>
               </li>
+              <li class="">
+                <a href="{{ route('admin.contact.index') }}" class="navItem {{ $route == 'admin.contact.index' ? 'active' : '' }}">
+                    <span class="flex items-center">
+                        <iconify-icon class=" nav-icon" icon="heroicons-outline:home"></iconify-icon>
+                        <span>Contact</span>
+                    </span>
+                </a>
+            </li>
 
             <li class="sidebar-menu-title">User</li>
             <li class="">
