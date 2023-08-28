@@ -24,22 +24,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home.index');
-});
-
-Route::controller(HomeController::class)->name('user.')->group(function () {
-    Route::get('/', 'index')->name('index');
-});
-
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
 
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+route::controller(HomeController::class)->name('home.')->group( function() {
+    Route::get('/', 'index')->name('index');
+    Route::post('/contact', 'contactStore')->name('contact.store');
+});
 
 Route::middleware('auth', 'verified')->controller(DashboardController::class)->group(function () {
     Route::get('/dashboard', 'index')->name('dashboard');
