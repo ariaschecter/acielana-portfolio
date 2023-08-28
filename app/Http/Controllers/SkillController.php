@@ -40,12 +40,12 @@ class SkillController extends Controller
         $validated = $request->validate([
             'skill_name' => 'required',
             'skill_desc' => 'required',
-            'skill_svg'  => 'required|mimes:svg',
+            'skill_picture'  => 'required|image',
         ]);
 
-        $image_upload = $request->skill_svg->store();
+        $image_upload = $request->skill_picture->store();
 
-        $validated['skill_svg'] = $image_upload;
+        $validated['skill_picture'] = $image_upload;
 
         Skill::create($validated);
 
@@ -87,12 +87,12 @@ class SkillController extends Controller
         $validated = $request->validate([
             'skill_name' => 'required',
             'skill_desc' => 'required',
-            'skill_svg'  => 'mimes:svg',
+            'skill_picture'  => 'image',
         ]);
 
-        if ($request->skill_svg !== null) {
-            Storage::delete($skill->skill_svg);
-            $validated['skill_svg'] = $request->skill_svg->store();
+        if ($request->skill_picture !== null) {
+            Storage::delete($skill->skill_picture);
+            $validated['skill_picture'] = $request->skill_picture->store();
         }
 
         $skill->update($validated);
@@ -105,7 +105,7 @@ class SkillController extends Controller
      */
     public function destroy(Skill $skill)
     {
-        Storage::delete($skill->skill_svg);
+        Storage::delete($skill->skill_picture);
         $skill->delete();
         return redirect()->back();
     }

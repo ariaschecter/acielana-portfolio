@@ -20,16 +20,16 @@
                     </div>
                     <div class="input-area">
                         <label for="skill_desc" class="form-label">Description<span class="text-danger-500">*</span></label>
-                        <textarea id="skill_desc" name="skill_desc" rows="5" class="form-control" placeholder="Type Here" readonly>{{ $skill->skill_desc }}</textarea>
+                        <textarea id="skill_desc" name="skill_desc" rows="5" class="form-control my-editor" placeholder="Type Here" readonly>{!! $skill->skill_desc !!}</textarea>
                         <x-input-error :messages="$errors->get('skill_desc')" class="mt-2" />
                     </div>
                     <div class="input-area">
-                        <label for="skill_desc" class="form-label">Skill SVG<span class="text-danger-500">*</span></label>
+                        <label for="skill_desc" class="form-label">Skill Picture<span class="text-danger-500">*</span></label>
                         <div class="card">
                             <div class="card-body flex flex-col p-6">
                                 <div class="card-text h-full ">
                                     <div class="grid xl:grid-cols-6 lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-5">
-                                        <img src="{{ Storage::url($skill->skill_svg) }}"
+                                        <img src="{{ Storage::url($skill->skill_picture) }}"
                                             class="rounded-md border-2 border-slate-300 max-w-full w-full block"
                                             alt="image">
                                     </div>
