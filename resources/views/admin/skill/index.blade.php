@@ -26,7 +26,7 @@
                                                 Name
                                             </th>
                                             <th scope="col" class=" table-th ">
-                                                Picure
+                                                SVG
                                             </th>
                                             <th scope="col" class=" table-th ">
                                                 Description
@@ -45,7 +45,7 @@
                                                 <td class="table-td">{{ $key + 1 }}</td>
                                                 <td class="table-td">{{ $skill->skill_name }}</td>
                                                 <td class="table-td">
-                                                    <img src="{{ Storage::url($skill->skill_picture) }}" alt="">
+                                                    <img src="{{ Storage::url($skill->skill_svg) }}" alt="">
                                                 </td>
                                                 <td class="table-td">{{ $skill->skill_desc }}</td>
                                                 <td class="table-td ">

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('skills', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('skill_name');
-            $table->string('skill_picture');
+            $table->string('skill_svg');
             $table->text('skill_desc');
             $table->timestamps();
         });

@@ -22,14 +22,14 @@
                     </div>
                     <div class="input-area">
                         <label for="skill_desc" class="form-label">Description<span class="text-danger-500">*</span></label>
-                        <textarea id="skill_desc" name="skill_desc" rows="5" class="form-control my-editor" placeholder="Type Here">{!! $skill->skill_desc !!}</textarea>
+                        <textarea id="skill_desc" name="skill_desc" rows="5" class="form-control" placeholder="Type Here">{{ $skill->skill_desc }}</textarea>
                         <x-input-error :messages="$errors->get('skill_desc')" class="mt-2" />
                     </div>
                     <div class="input-area">
-                        <label for="skill_picture" class="form-label">Skill Picture</label>
+                        <label for="skill_svg" class="form-label">Skill SVG</label>
                         <div class="filePreview">
                             <label>
-                                <input type="file" class=" w-full hidden" id="skill_picture" name="skill_picture">
+                                <input type="file" class=" w-full hidden" id="skill_svg" name="skill_svg">
                                 <span class="w-full h-[40px] file-control flex items-center custom-class">
                                     <span class="flex-1 overflow-hidden text-ellipsis whitespace-nowrap">
                                         <span id="placeholder" class="text-slate-400">Choose a file or drop it
@@ -39,7 +39,7 @@
                                         class="file-name flex-none cursor-pointer border-l px-4 border-slate-200 dark:border-slate-700 h-full inline-flex items-center bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 text-sm rounded-tr rounded-br font-normal">Browse</span>
                                 </span>
                             </label>
-                            <x-input-error :messages="$errors->get('skill_picture')" class="mt-2" />
+                            <x-input-error :messages="$errors->get('skill_svg')" class="mt-2" />
                             <div id="file-preview"></div>
                         </div>
                     </div>

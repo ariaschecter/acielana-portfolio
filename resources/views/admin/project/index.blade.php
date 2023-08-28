@@ -29,13 +29,13 @@
                                                 Picture
                                             </th>
                                             <th scope="col" class=" table-th ">
-                                                Category
+                                                Media
                                             </th>
                                             <th scope="col" class=" table-th ">
                                                 Client
                                             </th>
                                             <th scope="col" class=" table-th ">
-                                                Date
+                                                Language
                                             </th>
 
                                             <th scope="col" class=" table-th ">
@@ -53,28 +53,21 @@
                                                 <td class="table-td">
                                                     <img src="{{ Storage::url($project->project_picture) }}" alt="">
                                                 </td>
-                                                <td class="table-td">{{ $project->project_category }}</td>
+                                                <td class="table-td">{{ $project->project_media }}</td>
                                                 <td class="table-td">{{ $project->project_client }}</td>
-                                                <td class="table-td">{{ $project->project_date }}</td>
+                                                <td class="table-td">{{ $project->project_language }}</td>
                                                 <td class="table-td ">
                                                     <div class="flex space-x-3 rtl:space-x-reverse">
-                                                        <a href="{{ route('admin.project.show', $project->id) }}"
-                                                            class="toolTip onTop justify-center action-btn"
-                                                            data-tippy-content="Show" data-tippy-theme="primary">
+                                                        <a href="{{ route('admin.project.show', $project->id) }}" class="toolTip onTop justify-center action-btn" data-tippy-content="Show" data-tippy-theme="primary">
                                                             <iconify-icon icon="heroicons:eye"></iconify-icon>
                                                         </a>
-                                                        <a href="{{ route('admin.project.edit', $project->id) }}"
-                                                            class="toolTip onTop justify-center action-btn"
-                                                            data-tippy-content="Edit" data-tippy-theme="info">
+                                                        <a href="{{ route('admin.project.edit', $project->id) }}" class="toolTip onTop justify-center action-btn" data-tippy-content="Edit" data-tippy-theme="info">
                                                             <iconify-icon icon="heroicons:pencil-square"></iconify-icon>
                                                         </a>
-                                                        <form action="{{ route('admin.project.destroy', $project->id) }}"
-                                                            method="POST">
+                                                        <form action="{{ route('admin.project.destroy', $project->id) }}" method="POST">
                                                             @method('DELETE')
                                                             @csrf
-                                                            <button class="toolTip onTop justify-center action-btn"
-                                                                type="submit" data-tippy-content="Delete"
-                                                                data-tippy-theme="danger">
+                                                            <button class="toolTip onTop justify-center action-btn" type="submit" data-tippy-content="Delete" data-tippy-theme="danger">
                                                                 <iconify-icon icon="heroicons:trash"></iconify-icon>
                                                             </button>
                                                         </form>

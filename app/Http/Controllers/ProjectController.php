@@ -39,9 +39,9 @@ class ProjectController extends Controller
     {
         $validated = $request->validate([
             'project_name' => 'required',
-            'project_category' => 'required',
+            'project_media' => 'required',
             'project_client' => 'required',
-            'project_date' => 'required',
+            'project_language' => 'required',
             'project_desc' => 'required',
             'project_picture' => 'required|file|image',
             'project_url' => 'required|active_url',
@@ -90,9 +90,9 @@ class ProjectController extends Controller
     {
         $validated = $request->validate([
             'project_name' => 'required',
-            'project_category' => 'required',
+            'project_media' => 'required',
             'project_client' => 'required',
-            'project_date' => 'required',
+            'project_language' => 'required',
             'project_desc' => 'required',
             'project_picture' => 'file|image',
             'project_url' => 'required',

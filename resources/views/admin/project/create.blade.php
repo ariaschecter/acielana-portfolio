@@ -10,53 +10,40 @@
                 </div>
             </header>
             <div class="card-text h-full ">
-                <form class="space-y-4" method="POST" action="{{ route('admin.project.store') }}"
-                    enctype="multipart/form-data">
+                <form class="space-y-4" method="POST" action="{{ route('admin.project.store') }}" enctype="multipart/form-data">
                     @csrf
                     <div class="input-area relative">
-                        <label for="project_name" class="form-label">Project Name<span
-                                class="text-danger-500">*</span></label>
-                        <input type="text" id="project_name" name="project_name" class="form-control"
-                            placeholder="Enter Project Name" value="{{ old('project_name') }}">
+                        <label for="project_name" class="form-label">Project Name<span class="text-danger-500">*</span></label>
+                        <input type="text" id="project_name" name="project_name" class="form-control" placeholder="Enter Project Name" value="{{ old('project_name') }}">
                         <x-input-error :messages="$errors->get('project_name')" class="mt-2" />
                     </div>
                     <div class="input-area relative">
-                        <label for="project_client" class="form-label">Project Client<span
-                                class="text-danger-500">*</span></label>
-                        <input type="text" id="project_client" name="project_client" class="form-control"
-                            placeholder="Enter Project Client" value="{{ old('project_client') }}">
+                        <label for="project_client" class="form-label">Project Client<span class="text-danger-500">*</span></label>
+                        <input type="text" id="project_client" name="project_client" class="form-control" placeholder="Enter Project Client" value="{{ old('project_client') }}">
                         <x-input-error :messages="$errors->get('project_client')" class="mt-2" />
                     </div>
                     <div class="input-area relative">
-                        <label for="project_date" class="form-label">Project Date<span
-                                class="text-danger-500">*</span></label>
-                        <input class="form-control py-2" id="education_end" name="education_end"
-                            value="{{ old('project_date') }}" type="date">
-                        <x-input-error :messages="$errors->get('project_date')" class="mt-2" />
+                        <label for="project_language" class="form-label">Project Language<span class="text-danger-500">*</span></label>
+                        <input type="text" id="project_language" name="project_language" class="form-control" placeholder="Enter Project Language" value="{{ old('project_language') }}">
+                        <x-input-error :messages="$errors->get('project_language')" class="mt-2" />
                     </div>
                     <div class="input-area relative">
-                        <label for="project_category" class="form-label">Project Category<span
-                                class="text-danger-500">*</span></label>
-                        <input type="text" id="project_category" name="project_category" class="form-control"
-                            placeholder="Enter Project Category" value="{{ old('project_category') }}">
-                        <x-input-error :messages="$errors->get('project_category')" class="mt-2" />
+                        <label for="project_media" class="form-label">Project Media<span class="text-danger-500">*</span></label>
+                        <input type="text" id="project_media" name="project_media" class="form-control" placeholder="Enter Project Media" value="{{ old('project_media') }}">
+                        <x-input-error :messages="$errors->get('project_media')" class="mt-2" />
                     </div>
                     <div class="input-area relative">
-                        <label for="project_url" class="form-label">Project Url<span
-                                class="text-danger-500">*</span></label>
-                        <input type="text" id="project_url" name="project_url" class="form-control"
-                            placeholder="Enter Project Url" value="{{ old('project_url') }}">
+                        <label for="project_url" class="form-label">Project Url<span class="text-danger-500">*</span></label>
+                        <input type="text" id="project_url" name="project_url" class="form-control" placeholder="Enter Project Url" value="{{ old('project_url') }}">
                         <x-input-error :messages="$errors->get('project_url')" class="mt-2" />
                     </div>
                     <div class="input-area">
-                        <label for="project_desc" class="form-label">Description<span
-                                class="text-danger-500">*</span></label>
-                        <textarea id="project_desc" name="project_desc" rows="5" class="form-control my-editor" placeholder="Type Here">{!! old('project_desc') !!}</textarea>
+                        <label for="project_desc" class="form-label">Description<span class="text-danger-500">*</span></label>
+                        <textarea id="project_desc" name="project_desc" rows="5" class="form-control" placeholder="Type Here">{{ old('project_desc') }}</textarea>
                         <x-input-error :messages="$errors->get('project_desc')" class="mt-2" />
                     </div>
                     <div class="input-area">
-                        <label for="project_picture" class="form-label">Project Picture<span
-                                class="text-danger-500">*</span></label>
+                        <label for="project_picture" class="form-label">Project Picture<span class="text-danger-500">*</span></label>
                         <div class="filePreview">
                             <label>
                                 <input type="file" class=" w-full hidden" id="project_picture" name="project_picture">
