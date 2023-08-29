@@ -45,7 +45,7 @@ id="about">
         </div>
         <div class="sm:mb-[50px]">
             <div class="relative">
-                <img class="relative z-10 sm:mx-auto" src="{{ asset('frontend/images/about-me.png') }}"
+                <img class="relative z-10 sm:mx-auto" src="{{ asset('frontend/images/about.png') }}"
                     alt="">
                 <span
                     class="absolute sm:w-[100px] sm:h-[100px] only-md:w-[150px] only-md:h-[150px] lg:w-[200px] lg:h-[200px] xl:w-[250px] xl:h-[250px] border-[8px] lg:border-[13px] border-accent1 rounded-full xs:bottom-[-25%] sm:bottom-[-12%] bottom-[-18%] ltr:sm:left-[3%] ltr:left-[-18%] rtl:sm:right-[3%] rtl:right-[-18%] animateUpDown"></span>
