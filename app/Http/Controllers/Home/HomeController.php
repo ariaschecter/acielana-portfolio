@@ -29,13 +29,14 @@ class HomeController extends Controller
         $educations = $edu1->merge($edu2)->all();
 
         $projects = Project::latest()->take(6)->get();
-
+        $project = Project::latest()->get();
+        $total_project = count($project);
 
         $skills = Skill::all();
 
         $blogs = Blog::latest()->take(3)->get();
 
-        return view('home.index', compact('experiences', 'educations', 'projects', 'skills', 'blogs'));
+        return view('home.index', compact('experiences', 'educations', 'projects', 'skills', 'blogs', 'total_project'));
     }
 
     public function contactStore(Request $request) {

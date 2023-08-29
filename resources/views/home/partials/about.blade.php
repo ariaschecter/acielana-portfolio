@@ -11,7 +11,7 @@ id="about">
                     ME</span>
                 <h2
                     class="text-[24px] only-md:text-[32px] lg:text-[48px] font-bold font-heebo leading-[36px] lg:leading-[58px] text-[#000248] dark:text-white ltr:lg:pr-[50px] rtl:lg:pl-[50px]">
-                    I can design world for leading ui/ux</h2>
+                    Empowering Elegant Web Development.</h2>
             </div>
             <div class="mt-[30px]">
                 <h3 class="text-accent1 text-[20px] lg:text-[24px] font-medium ">PERSONAL INFOS:</h3>

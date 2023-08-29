@@ -17,9 +17,7 @@ id="portfolio">
         <div class="md:grow">
             <p
                 class="text-[#636363] dark:text-slate-200 text-[17px] leading-[28px] lg:max-w-[472px] w-full">
-                Promote your blog posts, case udie, and product ouncems
-                with the the branded videoscustomers coming back for
-                services Makes best effort.</p>
+                Explore my portfolio showcasing creative and innovative projects, reflecting my expertise and passion for web development.</p>
         </div>
     </div>
 

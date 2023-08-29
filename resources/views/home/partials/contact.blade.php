@@ -15,9 +15,7 @@
                         Get I contact work
                     </h2>
                     <p class="text-[#636363] dark:text-slate-200 text-[17px] leading-[28px] lg:max-w-[472px] w-full">
-                        Promote your blog posts, case udie, and product ouncems
-                        with the the branded videoscustomers coming back for
-                        services Makes best effort.</p>
+                        Connect for collaboration or inquiries. Excited to hear from you and explore opportunities to work together on creative projects.</p>
                 </div>
                 <!-- Section title end -->
 

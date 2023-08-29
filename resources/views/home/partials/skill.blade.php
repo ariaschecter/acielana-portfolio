@@ -15,21 +15,19 @@
             <div class="md:grow">
                 <p
                     class="text-[#636363] text-[17px] leading-[28px] lg:max-w-[472px] w-full dark:text-slate-200">
-                    Promote your blog posts, case udie, and product ouncems
-                    with the the branded videoscustomers coming back for
-                    services Makes best effort.</p>
+                    Experienced Laravel developer building powerful web solutions. Expertise in creating efficient and elegant applications that deliver exceptional user experiences.</p>
             </div>
         </div>
         <!-- Section title end -->
 
         @php
         $background = [
-            'before:bg-[#79DAB9] before:opacity-[0.26]',
-            'before:bg-[#ED5F38] before:opacity-[0.16]',
-            'before:bg-[#007EFF] before:opacity-[0.16]',
-            'before:bg-[#E6BC13] before:opacity-[0.22]',
-            'before:bg-[#ED38D1] before:opacity-[0.16]',
-            'before:bg-[#A348CD] before:opacity-[0.16]',
+            ['before:bg-[#79DAB9] before:opacity-[0.26]', '#48CDA0'],
+            ['before:bg-[#ED5F38] before:opacity-[0.16]', '#ED5F38'],
+            ['before:bg-[#007EFF] before:opacity-[0.16]', '#007EFF'],
+            ['before:bg-[#E6BC13] before:opacity-[0.22]', '#E6BC13'],
+            ['before:bg-[#ED38D1] before:opacity-[0.16]', '#ED38D1'],
+            ['before:bg-[#A348CD] before:opacity-[0.16]', '#A348CD'],
         ]
         @endphp
 
@@ -42,7 +40,7 @@
                 class="shadow-[0_0_50px_0_rgba(196,206,213,0.2)] hover:shadow-[0_0_150px_0_rgba(196,206,213,0.7)]  dark:shadow-[0_0_20px_0_rgba(0,0,0,0.1)] dark:hover:shadow-[0_0_50px_0_rgba(0,0,0,0.2)] hover:translate-y-[-10px] transition duration-500">
                 <div class="overflow-hidden px-[30px] xl:px-[40px] lg:pt-[50px] md:pt-[40px] pb-[40px] ">
                     <span
-                        class="bg-[#48CDA0] text-white w-[70px] h-[70px] lg:w-[93px] lg:h-[93px] flex items-center justify-center rounded-full service-shape {{ $background[$key % 6] }}">
+                        class="bg-[{{ $background[$key % 6][1] }}] text-white w-[70px] h-[70px] lg:w-[93px] lg:h-[93px] flex items-center justify-center rounded-full service-shape {{ $background[$key % 6][0] }}">
                         {!! Storage::get($skill->skill_svg) !!}
 
                     </span>

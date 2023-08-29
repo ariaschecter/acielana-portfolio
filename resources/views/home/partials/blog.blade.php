@@ -15,9 +15,7 @@
             <div class="md:grow">
                 <p
                     class="text-[#636363] dark:text-slate-200 text-[17px] leading-[28px] lg:max-w-[472px] w-full">
-                    Promote your blog posts, case udie, and product ouncems
-                    with the the branded videoscustomers coming back for
-                    services Makes best effort.</p>
+                    Dive into my portfolio's blog section for insightful articles, showcasing my expertise and passion in just a few words.</p>
             </div>
         </div>
         <!-- Section title end -->

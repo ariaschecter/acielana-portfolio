@@ -9,15 +9,15 @@ id="home">
     class="container mx-auto flex sm:flex-col items-center justify-center lg:mt-[40px] only-md:mt-[40px] sm:pt-[100px] sm:pb-[70px]">
     <div class="lg:max-w-[40%] sm:max-w-[60%] xs:max-w-[85%] only-md:max-w-[40%] flex justify-end">
         <div class="relative only-xl:max-w-[70%]">
-            <img class="hidden dark:block" src="{{ asset('frontend/images/hero-man-dark.png') }}"
+            <img class="hidden dark:block" src="{{ asset('frontend/images/hero-image.png') }}"
                 alt="">
-            <img class="dark:hidden" src="{{ asset('frontend/images/hero-man.png') }}" alt="">
+            <img class="dark:hidden" src="{{ asset('frontend/images/hero-image.png') }}" alt="">
             <span
                 class="absolute top-[100px] lg:top-[210px] right-[-20px] only-md:right-[-10px] only-xl:max-w-[65px] lg:max-w-[80px] xl:max-w-[105px] sm:max-w-[50px] only-md:max-w-[70px] animateUpDown"><img
-                    src="{{ asset('frontend/images/photoshop-logo.png') }}" alt=""></span>
+                    src="{{ asset('frontend/images/Github.png') }}" alt=""></span>
             <span
                 class="absolute top-[80px] left-[-40px] md:left-[-10px] only-xl:max-w-[65px] lg:max-w-[80px] xl:max-w-[105px] sm:max-w-[50px] only-md:max-w-[70px] animateUpDown"><img
-                    src="{{ asset('frontend/images/figma.png') }}" alt=""></span>
+                    src="{{ asset('frontend/images/Laravel.png') }}" alt=""></span>
 
             <div
                 class="flex items-center absolute bottom-0 right-0 bg-white dark:bg-dark_accent1 rounded-[50px] px-[15px] py-[15px] shadow-[0_0_50px_0_rgba(196,206,213,0.2)] dark:shadow-[0_0_50px_0_rgba(0,0,0,0.2)]">
@@ -32,7 +32,7 @@ id="home">
                 </div>
                 <div class="pl-[10px] pr-[15px]">
                     <span
-                        class="block text-[20px] lg:text-[26px] font-bold text-primary dark:text-white font-heebo leading-[1]">1100k+</span>
+                        class="block text-[20px] lg:text-[26px] font-bold text-primary dark:text-white font-heebo leading-[1]">{{ $total_project }}</span>
                     <span class="block text-paragraph dark:text-slate-200 text-[17px]">Completed
                         projects</span>
                 </div>
@@ -45,13 +45,13 @@ id="home">
         <span class="text-accent1 text-[24px] font-semibold italic pb-[5px]">HELLO I'M</span>
         <h2
             class="lg:text-[60px] only-md:text-[40px] sm:text-[28px] font-bold font-heebo text-heading dark:text-white">
-            Maras Faron! </h2>
-        <h3 class="font-heebo font-normal text-primary dark:text-white">UX/UI Designer and Developer </h3>
+            Aria Maulana Eka Mahendra! </h2>
+        <h3 class="font-heebo font-normal text-primary dark:text-white">Laravel Developer </h3>
         <p
             class="lg:text-[20px] md:text-[16px] text-paragraph dark:text-slate-200 lg:mt-[18px] md:mt-[15px]">
             There are many variations of sum availabled <br> in alley of type and scrambled it some.</p>
         <div class="flex items-center gap-[18px] flex-wrap mt-[30px] sm:justify-center">
-            <a href="#" class="btn outline-btn text-accent1 shrink-0">About Me</a>
+            <a href="{{ url('/#about') }}" class="btn outline-btn text-accent1 shrink-0">About Me</a>
             <div class="flex items-center flex-wrap gap-[15px] sm:justify-center">
                 <span
                     class="font-heebo lg:text-[22px] md:text-[18px] font-semibold shrink-0 text-primary dark:text-white">Follow
