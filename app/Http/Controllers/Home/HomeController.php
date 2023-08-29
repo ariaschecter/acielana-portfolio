@@ -8,6 +8,7 @@ use App\Models\Contact;
 use App\Models\Education;
 use App\Models\Experience;
 use App\Models\Project;
+use App\Models\Resume;
 use App\Models\Skill;
 use Illuminate\Http\Request;
 
@@ -36,7 +37,9 @@ class HomeController extends Controller
 
         $blogs = Blog::latest()->take(3)->get();
 
-        return view('home.index', compact('experiences', 'educations', 'projects', 'skills', 'blogs', 'total_project'));
+        $resume = Resume::latest()->first();
+
+        return view('home.index', compact('experiences', 'educations', 'projects', 'skills', 'blogs', 'total_project', 'resume'));
     }
 
     public function contactStore(Request $request) {

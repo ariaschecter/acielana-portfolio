@@ -37,7 +37,7 @@
             <line x1="12" y1="15" x2="12" y2="3"></line>
         </svg>
     </span>
-    <span
+    <a href="{{ $resume ? Storage::url($resume->resume_url) : '' }}" target="_blank" rel="noopener noreferrer"><span
         class="ltr:xl:pr-[5px] ltr:lg:pr-[5px] rtl:xl:pl-[5px] rtl:lg:pl-[5px] relative z-[8] flex-shrink-0">Download CV
-    </span>
+    </span></a>
 </button>
