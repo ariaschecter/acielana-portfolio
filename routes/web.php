@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EducationController;
@@ -8,6 +9,7 @@ use App\Http\Controllers\ExperienceController;
 use App\Http\Controllers\Home\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\ResumeController;
 use App\Http\Controllers\SkillController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Artisan;
@@ -51,6 +53,8 @@ Route::middleware('role:admin', 'auth')->prefix('admin')->name('admin.')->group(
     Route::resource('skill', SkillController::class);
     Route::resource('project', ProjectController::class);
     Route::resource('blog', BlogController::class);
+    Route::resource('category', CategoryController::class)->except('show');
+    Route::resource('resume', ResumeController::class)->except('edit', 'update');
     Route::resource('contact', ContactController::class)->except('create', 'store', 'show', 'edit', 'update');
 });
 

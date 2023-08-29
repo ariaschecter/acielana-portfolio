@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -29,7 +30,8 @@ class BlogController extends Controller
             ['Create', false],
         ];
         $title = 'Create Blog';
-        return view('admin.blog.create', compact('breadcrumbs', 'title'));
+        $categories = Category::orderBy('category_name', 'ASC')->get();
+        return view('admin.blog.create', compact('breadcrumbs', 'title', 'categories'));
     }
 
     /**
@@ -38,9 +40,10 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
+            'category_id' => 'required',
             'blog_title' => 'required',
             'blog_desc' => 'required',
-            'blog_quote' => 'required',
+            'blog_quote' => 'sometimes',
             'blog_picture' => 'required|file|image',
         ]);
 
@@ -77,7 +80,8 @@ class BlogController extends Controller
             ['Edit', false],
         ];
         $title = $blog->blog_title;
-        return view('admin.blog.edit', compact('breadcrumbs', 'title', 'blog'));
+        $categories = Category::orderBy('category_name', 'ASC')->get();
+        return view('admin.blog.edit', compact('breadcrumbs', 'title', 'blog', 'categories'));
     }
 
     /**
@@ -86,9 +90,10 @@ class BlogController extends Controller
     public function update(Request $request, Blog $blog)
     {
         $validated = $request->validate([
+            'category_id' => 'required',
             'blog_title' => 'required',
             'blog_desc' => 'required',
-            'blog_quote' => 'required',
+            'blog_quote' => 'sometimes',
             'blog_picture' => 'file|image',
         ]);
 

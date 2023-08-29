@@ -23,16 +23,7 @@
                                                 Id
                                             </th>
                                             <th scope="col" class=" table-th ">
-                                                Title
-                                            </th>
-                                            <th scope="col" class=" table-th ">
-                                                Picture
-                                            </th>
-                                            <th scope="col" class=" table-th ">
-                                                Category
-                                            </th>
-                                            <th scope="col" class=" table-th ">
-                                                Quote
+                                                Name
                                             </th>
 
                                             <th scope="col" class=" table-th ">
@@ -43,24 +34,16 @@
                                     </thead>
                                     <tbody
                                         class="bg-white divide-y divide-slate-100 dark:bg-slate-800 dark:divide-slate-700">
-                                        @foreach ($blogs as $key => $blog)
+                                        @foreach ($categories as $key => $category)
                                             <tr>
                                                 <td class="table-td">{{ $key + 1 }}</td>
-                                                <td class="table-td">{{ $blog->blog_title }}</td>
-                                                <td class="table-td">
-                                                    <img src="{{ Storage::url($blog->blog_picture) }}" alt="">
-                                                </td>
-                                                <td class="table-td">{{ $blog->category->category_name }}</td>
-                                                <td class="table-td">{{ $blog->blog_quote }}</td>
+                                                <td class="table-td">{{ $category->category_name }}</td>
                                                 <td class="table-td ">
                                                     <div class="flex space-x-3 rtl:space-x-reverse">
-                                                        <a href="{{ route('admin.blog.show', $blog->id) }}" class="toolTip onTop justify-center action-btn" data-tippy-content="Show" data-tippy-theme="primary">
-                                                            <iconify-icon icon="heroicons:eye"></iconify-icon>
-                                                        </a>
-                                                        <a href="{{ route('admin.blog.edit', $blog->id) }}" class="toolTip onTop justify-center action-btn" data-tippy-content="Edit" data-tippy-theme="info">
+                                                        <a href="{{ route('admin.category.edit', $category->id) }}" class="toolTip onTop justify-center action-btn" data-tippy-content="Edit" data-tippy-theme="info">
                                                             <iconify-icon icon="heroicons:pencil-square"></iconify-icon>
                                                         </a>
-                                                        <form action="{{ route('admin.blog.destroy', $blog->id) }}" method="POST">
+                                                        <form action="{{ route('admin.category.destroy', $category->id) }}" method="POST">
                                                             @method('DELETE')
                                                             @csrf
                                                             <button class="toolTip onTop justify-center action-btn" type="submit" data-tippy-content="Delete" data-tippy-theme="danger">

@@ -15,8 +15,9 @@ class="blog__card shadow-[0_0_50px_0_rgba(196,206,213,0.2)] hover:shadow-[0_0_10
     <div class="p-[30px]">
         <div class="mb-[15px]">
             <span
-                class="bg-accent1_rgb text-[14px] uppercase py-1 px-[6px] text-accent1 dark:text-white dark:bg-accent1 hover:bg-accent1 hover:text-white transition-all duration-300">UI
-                /UX DESIGN</span>
+                class="bg-accent1_rgb text-[14px] uppercase py-1 px-[6px] text-accent1 dark:text-white dark:bg-accent1 hover:bg-accent1 hover:text-white transition-all duration-300">
+            {{ $blog->category->category_name }}
+            </span>
         </div>
         <div>
             <h3 class="text-[25px] leading-7 font-heebo font-bold">

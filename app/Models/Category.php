@@ -6,17 +6,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Traits\Uuids;
 
-class Blog extends Model
+class Category extends Model
 {
     use HasFactory, Uuids;
 
     protected $guarded = ['id'];
 
-    protected $casts = [
-        'uuid' => 'string'
-    ];
-
-    public function category() {
-        return $this->BelongsTo(Category::class, 'category_id', 'id');
+    public function blog() {
+        return $this->hasMany(Blog::class, 'category_id', 'id');
     }
 }

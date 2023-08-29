@@ -17,13 +17,22 @@
                         <input type="text" id="blog_title" name="blog_title" class="form-control" placeholder="Enter Blog Title" value="{{ old('blog_title') }}">
                         <x-input-error :messages="$errors->get('blog_title')" class="mt-2" />
                     </div>
+                    <div>
+                        <label for="category_id" class="form-label">Category</label>
+                        <select name="category_id" id="category_id" class="select2 form-control w-full mt-2 py-2">
+                            @foreach ($categories as $category)
+                                <option value="{{ $category->id }}" {{ $category->id == old('category_id') ? 'selected' : '' }} class=" inline-block font-Inter font-normal text-sm text-slate-600">{{ $category->category_name }}</option>
+                            @endforeach
+                        </select>
+                        <x-input-error :messages="$errors->get('category_id')" class="mt-2" />
+                    </div>
                     <div class="input-area">
                         <label for="blog_desc" class="form-label">Description<span class="text-danger-500">*</span></label>
                         <textarea id="blog_desc" name="blog_desc" rows="5" class="form-control my-editor" placeholder="Type Here">{!! old('blog_desc') !!}</textarea>
                         <x-input-error :messages="$errors->get('blog_desc')" class="mt-2" />
                     </div>
                     <div class="input-area">
-                        <label for="blog_quote" class="form-label">Quote<span class="text-danger-500">*</span></label>
+                        <label for="blog_quote" class="form-label">Quote</label>
                         <textarea id="blog_quote" name="blog_quote" rows="5" class="form-control" placeholder="Type Here">{{ old('blog_quote') }}</textarea>
                         <x-input-error :messages="$errors->get('blog_quote')" class="mt-2" />
                     </div>

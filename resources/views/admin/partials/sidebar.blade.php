@@ -115,6 +115,23 @@
                 <a href="javascript:void(0)" class="navItem">
                     <span class="flex items-center">
                         <iconify-icon class="nav-icon" icon="heroicons-outline:user"></iconify-icon>
+                        <span>Category</span>
+                    </span>
+                  <iconify-icon class="icon-arrow" icon="heroicons-outline:chevron-right"></iconify-icon>
+                </a>
+                <ul class="sidebar-submenu">
+                  <li class="">
+                    <a href="{{ route('admin.category.index') }}" class="{{ $route == 'admin.category.index' ? 'active' : '' }}">All Category</a>
+                  </li>
+                  <li class="">
+                    <a href="{{ route('admin.category.create') }}" class="{{ $route == 'admin.category.create' ? 'active' : '' }}">Add Category</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="">
+                <a href="javascript:void(0)" class="navItem">
+                    <span class="flex items-center">
+                        <iconify-icon class="nav-icon" icon="heroicons-outline:user"></iconify-icon>
                         <span>Blog</span>
                     </span>
                   <iconify-icon class="icon-arrow" icon="heroicons-outline:chevron-right"></iconify-icon>
@@ -125,6 +142,23 @@
                   </li>
                   <li class="">
                     <a href="{{ route('admin.blog.create') }}" class="{{ $route == 'admin.blog.create' ? 'active' : '' }}">Add Blog</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="">
+                <a href="javascript:void(0)" class="navItem">
+                    <span class="flex items-center">
+                        <iconify-icon class="nav-icon" icon="heroicons-outline:user"></iconify-icon>
+                        <span>Resume</span>
+                    </span>
+                  <iconify-icon class="icon-arrow" icon="heroicons-outline:chevron-right"></iconify-icon>
+                </a>
+                <ul class="sidebar-submenu">
+                  <li class="">
+                    <a href="{{ route('admin.resume.index') }}" class="{{ $route == 'admin.resume.index' ? 'active' : '' }}">All Resume</a>
+                  </li>
+                  <li class="">
+                    <a href="{{ route('admin.resume.create') }}" class="{{ $route == 'admin.resume.create' ? 'active' : '' }}">Add Resume</a>
                   </li>
                 </ul>
               </li>

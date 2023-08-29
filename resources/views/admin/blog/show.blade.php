@@ -16,13 +16,18 @@
                         <input type="text" id="blog_title" name="blog_title" class="form-control" placeholder="Enter Blog Title" value="{{ $blog->blog_title }}">
                         <x-input-error :messages="$errors->get('blog_title')" class="mt-2" />
                     </div>
+                    <div class="input-area relative">
+                        <label for="category_id" class="form-label">Category<span class="text-danger-500">*</span></label>
+                        <input type="text" id="category_id" name="category_id" class="form-control" placeholder="Enter Blog Title" value="{{ $blog->category->category_name }}">
+                        <x-input-error :messages="$errors->get('category_id')" class="mt-2" />
+                    </div>
                     <div class="input-area">
                         <label for="blog_desc" class="form-label">Description<span class="text-danger-500">*</span></label>
                         <textarea id="blog_desc" name="blog_desc" rows="5" class="form-control my-editor" placeholder="Type Here">{!! $blog->blog_desc !!}</textarea>
                         <x-input-error :messages="$errors->get('blog_desc')" class="mt-2" />
                     </div>
                     <div class="input-area">
-                        <label for="blog_quote" class="form-label">Quote<span class="text-danger-500">*</span></label>
+                        <label for="blog_quote" class="form-label">Quote</label>
                         <textarea id="blog_quote" name="blog_quote" rows="5" class="form-control" placeholder="Type Here">{{ $blog->blog_quote }}</textarea>
                         <x-input-error :messages="$errors->get('blog_quote')" class="mt-2" />
                     </div>
