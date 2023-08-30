@@ -43,6 +43,16 @@ class HomeController extends Controller
         return view('home.index', compact('experiences', 'educations', 'projects', 'skills', 'blogs', 'total_project', 'resume'));
     }
 
+    public function blog() {
+        $blogs = Blog::latest()->get();
+        return view('home.blog', compact('blogs'));
+    }
+
+    public function portfolio() {
+        $projects = Project::latest()->get();
+        return view('home.portfolio', compact('projects'));
+    }
+
     public function contactStore(Request $request) {
         // dd($request);
         $validated = $request->validate([

@@ -26,9 +26,13 @@
 
 
             @foreach ($blogs as $blog)
-                @include('home.components.blog')
+            @include('home.components.blog')
             @endforeach
 
+
+        </div>
+        <div class="button-group filters-button-group flex justify-center flex-wrap gap-[30px]">
+            <button class="btn solid-btn mt-12"><a href="/blog">See All</a></button>
         </div>
     </div>
 </section>
