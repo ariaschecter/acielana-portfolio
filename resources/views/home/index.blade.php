@@ -40,7 +40,7 @@
             <div class="container mx-auto">
                 <div class="flex justify-between items-center">
                     <div class="logo">
-                        <a href="./index.html">
+                        <a href="{{ url('/') }}">
                             <img class="hidden dark:block" src="{{ asset('frontend/images/logo-light.png') }}"
                                 alt="">
                             <img class="dark:hidden" src="{{ asset('frontend/images/logo.png') }}" alt="">
@@ -66,7 +66,7 @@
             <div class="offcanvas__header lg:hidden dark:bg-gray-800">
                 <div class="offcanvas__inner">
                     <div class="offcanvas__logo">
-                        <a class="offcanvas__logo_link" href="index.html">
+                        <a class="offcanvas__logo_link" href="{{ url('/') }}">
                             <img class="dark:hidden" src="{{ asset('frontend/images/logo.png') }}" alt="Grocee Logo"
                                 width="158" height="36">
                             <img class="hidden dark:block" src="{{ asset('frontend/images/logo-light.png') }}"
@@ -78,11 +78,6 @@
                         <ul class="offcanvas__menu_ul">
                             <li class="offcanvas__menu_li">
                                 <a class="offcanvas__menu_item dark:text-white" href="#home">Home</a>
-                                <!-- <ul class="offcanvas__sub_menu">
-                              <li class="offcanvas__sub_menu_li"><a href="index.html" class="offcanvas__sub_menu_item dark:text-white">Home One</a></li>
-                              <li class="offcanvas__sub_menu_li"><a href="index-2.html" class="offcanvas__sub_menu_item dark:text-white">Home Two</a></li>
-                              <li class="offcanvas__sub_menu_li"><a href="index-3.html" class="offcanvas__sub_menu_item dark:text-white">Home Three</a></li>
-                          </ul> -->
                             </li>
                             <li class="offcanvas__menu_li"><a class="offcanvas__menu_item dark:text-white"
                                     href="#about">About</a></li>
@@ -97,8 +92,7 @@
                         </ul>
                         <button
                             class="flex mx-auto bg-accent1 lg:px-[15px] px-[12px] xl:py-[12px] py-[10px] rounded-[2rem] text-[16px] xl:text-[18px] font-medium text-white items-center transition duration-300 relative after:absolute :after:content-[''] after:bg-primary after:h-full after:w-full after:bottom-0 after:left-0 after:rounded-[2rem] after:trasition after:duration-300 after:opacity-0 hover:after:opacity-[1] mt-[30px]"
-                            type="submit"
-                            >
+                            type="submit">
                             <span
                                 class="icon bg-[#EFEBEB] text-accent1 w-[34px] h-[34px] rounded-full flex items-center justify-center ltr:xl:mr-[15px] ltr:mr-[10px] rtl:xl:ml-[15px] rtl:ml-[10px] relative z-[8] flex-shrink-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
@@ -109,9 +103,11 @@
                                     <line x1="12" y1="15" x2="12" y2="3"></line>
                                 </svg>
                             </span>
-                            <a href="{{ $resume ? Storage::url($resume->resume_url) : '' }}" target="_blank" rel="noopener noreferrer"><span
-                                class="ltr:xl:pr-[5px] ltr:lg:pr-[5px] rtl:xl:pl-[5px] rtl:lg:pl-[5px] relative z-[8] flex-shrink-0">Download CV
-                            </span></a>
+                            <a href="{{ $resume ? Storage::url($resume->resume_url) : '' }}" target="_blank"
+                                rel="noopener noreferrer"><span
+                                    class="ltr:xl:pr-[5px] ltr:lg:pr-[5px] rtl:xl:pl-[5px] rtl:lg:pl-[5px] relative z-[8] flex-shrink-0">Download
+                                    CV
+                                </span></a>
                         </button>
                     </nav>
 
@@ -156,8 +152,7 @@
                 <div class="flex">
                     <p class="flex items-center flex-wrap sm:justify-center dark:text-slate-200">
                         Developed with
-                        <span
-                            class="px-[3px] text-paragraph dark:text-white">
+                        <span class="px-[3px] text-paragraph dark:text-white">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                 viewBox="0 0 24 24" fill="currentColor" stroke="text-paragraph" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart">
