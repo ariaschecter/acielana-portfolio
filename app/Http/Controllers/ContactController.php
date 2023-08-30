@@ -17,4 +17,9 @@ class ContactController extends Controller
         $contacts = Contact::latest()->get();
         return view('admin.contact.index', compact('breadcrumbs', 'title', 'contacts'));
     }
+
+    public function destroy(Contact $contact) {
+        $contact->delete();
+        return redirect()->back();
+    }
 }

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EducationController;
@@ -63,6 +64,7 @@ Route::middleware('role:admin', 'auth')->prefix('admin')->name('admin.')->group(
     Route::resource('category', CategoryController::class)->except('show');
     Route::resource('resume', ResumeController::class)->except('edit', 'update');
     Route::resource('contact', ContactController::class)->except('create', 'store', 'show', 'edit', 'update');
+    Route::resource('comment', CommentController::class)->except('create', 'store', 'show', 'edit', 'update');
 });
 
 require __DIR__.'/auth.php';

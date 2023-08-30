@@ -170,6 +170,14 @@
                     </span>
                 </a>
             </li>
+              <li class="">
+                <a href="{{ route('admin.comment.index') }}" class="navItem {{ $route == 'admin.comment.index' ? 'active' : '' }}">
+                    <span class="flex items-center">
+                        <iconify-icon class=" nav-icon" icon="heroicons-outline:home"></iconify-icon>
+                        <span>Comment</span>
+                    </span>
+                </a>
+            </li>
 
             <li class="sidebar-menu-title">User</li>
             <li class="">
