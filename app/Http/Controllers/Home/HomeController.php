@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
+use App\Models\Comment;
 use App\Models\Contact;
 use App\Models\Education;
 use App\Models\Experience;
@@ -35,7 +36,7 @@ class HomeController extends Controller
 
         $skills = Skill::all();
 
-        $blogs = Blog::latest()->take(3)->get();
+        $blogs = Blog::with('comment')->latest()->take(3)->get();
 
         $resume = Resume::latest()->first();
 
@@ -53,5 +54,35 @@ class HomeController extends Controller
         Contact::create($validated);
 
         return redirect('/#contact')->with('message', 'Your Message is Sent Successfully!');
+    }
+
+    public function blogStore(Request $request, $id) {
+        // dd($request);
+        $validated = $request->validate([
+            'comment_name' => 'required',
+            'comment_email' => 'required',
+            'comment_message' => 'required'
+        ]);
+
+        $validated['parent_id'] = $id;
+
+        Comment::create($validated);
+
+        return redirect('/#blog')->with('message_blog', 'Your Comment is Sent Successfully!');
+    }
+
+    public function projectStore(Request $request, $id) {
+        // dd($request);
+        $validated = $request->validate([
+            'comment_name' => 'required',
+            'comment_email' => 'required',
+            'comment_message' => 'required'
+        ]);
+
+        $validated['parent_id'] = $id;
+
+        Comment::create($validated);
+
+        return redirect('/#portfolio')->with('message_project', 'Your Comment is Sent Successfully!');
     }
 }

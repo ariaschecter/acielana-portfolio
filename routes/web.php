@@ -38,6 +38,8 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']
 route::controller(HomeController::class)->name('home.')->group( function() {
     Route::get('/', 'index')->name('index');
     Route::post('/contact', 'contactStore')->name('contact.store');
+    Route::post('/blog/{id}', 'blogStore')->name('comment.store');
+    Route::post('/project/{id}', 'projectStore')->name('comment.project.store');
 });
 
 Route::middleware('auth', 'verified')->controller(DashboardController::class)->group(function () {

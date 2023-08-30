@@ -19,8 +19,11 @@
             </div>
         </div>
         <!-- Section title end -->
-
+        @if (session()->get('message_blog'))
+            <p class="text-accent1 text-[20px] lg:text-[24px] font-medium mb-[10px] lg:mb-[5px] mb-5">{{ session()->get('message_blog') }}</p>
+        @endif
         <div class="grid grid-cols-1 only-md:grid-cols-2 lg:grid-cols-3 gap-[30px]">
+
 
             @foreach ($blogs as $blog)
                 @include('home.components.blog')

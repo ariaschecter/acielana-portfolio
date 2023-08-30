@@ -15,4 +15,8 @@ class Project extends Model
     protected $casts = [
         'uuid' => 'string'
     ];
+
+    public function comment() {
+        return $this->hasMany(Comment::class, 'parent_id', 'id');
+    }
 }

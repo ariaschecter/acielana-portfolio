@@ -19,4 +19,8 @@ class Blog extends Model
     public function category() {
         return $this->BelongsTo(Category::class, 'category_id', 'id');
     }
+
+    public function comment() {
+        return $this->hasMany(Comment::class, 'parent_id', 'id');
+    }
 }
