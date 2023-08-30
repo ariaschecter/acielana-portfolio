@@ -10,7 +10,7 @@
                     SERVICE</span>
                 <h2
                     class="text:[28px] lg:text-[48px] font-bold font-heebo leading-[36x] lg:leading-[58px] text-[#000248] dark:text-white">
-                    What can i do for service clients you</h2>
+                    What can I do for service clients you</h2>
             </div>
             <div class="md:grow">
                 <p
