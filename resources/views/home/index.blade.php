@@ -82,7 +82,7 @@
                             <li class="offcanvas__menu_li"><a class="offcanvas__menu_item dark:text-white"
                                     href="#about">About</a></li>
                             <li class="offcanvas__menu_li"><a class="offcanvas__menu_item dark:text-white"
-                                    href="#services">Services</a></li>
+                                    href="#experience">Experience</a></li>
                             <li class="offcanvas__menu_li"><a class="offcanvas__menu_item dark:text-white"
                                     href="#portfolio">Portfolio</a></li>
                             <li class="offcanvas__menu_li"><a class="offcanvas__menu_item dark:text-white"
