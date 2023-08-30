@@ -12,6 +12,7 @@
             <div class="card-text h-full ">
                 <form class="space-y-4" method="POST" action="{{ route('admin.category.update', $category->id) }}">
                     @csrf
+                    @method('PUT')
                     <div class="input-area relative">
                         <label for="category_name" class="form-label">Category Name<span class="text-danger-500">*</span></label>
                         <input type="text" id="category_name" name="category_name" class="form-control" placeholder="Enter category Name" value="{{ $category->category_name }}">
