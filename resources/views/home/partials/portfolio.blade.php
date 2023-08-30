@@ -51,7 +51,7 @@
                                             {{ $pro->project_name }}</h3>
                                         <span
                                             class="portfolio--sub-title text-[17px] 2xs:hidden transition-all duration-500 translate-y-3">
-                                            {{ $pro->project_desc }}
+                                            {{ Str::limit($pro->project_desc, 75) }}
                                         </span>
                                     </div>
                                 </span>

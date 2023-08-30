@@ -26,8 +26,7 @@
                         {{ $blog->blog_title }}
                     </span>
                 </h3>
-                <p class="mt-[15px] text-paragraph dark:text-slate-200 text-[17px]">Lorem ipsum
-                    dolor sit amet,elit, sed do eiusmod tempor incididunt ut labore et dolore aliqu
+                <p class="mt-[15px] text-paragraph dark:text-slate-200 text-[17px]">{!! Str::limit($blog->blog_desc, 75) !!}
                 </p>
             </div>
         </div>
