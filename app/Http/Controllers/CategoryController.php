@@ -68,7 +68,6 @@ class CategoryController extends Controller
     {
         $breadcrumbs = [
             ['Category', true, route('admin.category.index')],
-            [$category->category_name, true, route('admin.category.show', $category->id)],
             ['Edit', false],
         ];
         $title = $category->category_name;
