@@ -41,9 +41,9 @@
                 <div class="flex justify-between items-center">
                     <div class="logo">
                         <a href="{{ url('/') }}">
-                            <img class="hidden dark:block" src="{{ asset('frontend/images/logo-light.png') }}"
+                            <img class="hidden dark:block" src="{{ asset('frontend/images/logo-dark.png') }}"
                                 alt="">
-                            <img class="dark:hidden" src="{{ asset('frontend/images/logo.png') }}" alt="">
+                            <img class="dark:hidden" src="{{ asset('frontend/images/logo-sunny.png') }}" alt="">
                         </a>
                     </div>
                     <div class="flex items-center md:hidden">
