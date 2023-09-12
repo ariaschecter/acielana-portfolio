@@ -3,6 +3,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aria Maulana Eka Mahendra | Acielana</title>
+    <meta name="description" content="Aria Maulana Eka Mahendra, Laravel Developer, Lulusan Terbaik Front End Back End & Distinction Graduate Cloud Computing Dicoding Akademi Indonesia.">
+    <meta name="keywords" content="laravel, laravel developer, freelance, php, resume, cv, portfolio">
 
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/favicon/favicon.ico') }}">
     <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('frontend/favicon/apple-icon-57x57.png') }}">
