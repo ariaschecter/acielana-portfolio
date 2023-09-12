@@ -41,7 +41,7 @@
                 class="shadow-[0_0_50px_0_rgba(196,206,213,0.2)] hover:shadow-[0_0_150px_0_rgba(196,206,213,0.7)]  dark:shadow-[0_0_20px_0_rgba(0,0,0,0.1)] dark:hover:shadow-[0_0_50px_0_rgba(0,0,0,0.2)] hover:translate-y-[-10px] transition duration-500">
                 <div class="overflow-hidden px-[30px] xl:px-[40px] lg:pt-[50px] md:pt-[40px] pb-[40px] ">
                     <span
-                        class="bg-[{{ $background[$key % 6][1] }}] text-white w-[70px] h-[70px] lg:w-[93px] lg:h-[93px] flex items-center justify-center rounded-full service-shape {{ $background[$key % 6][0] }}">
+                        class="bg-[{{ $background[$key % 7][1] }}] text-white w-[70px] h-[70px] lg:w-[93px] lg:h-[93px] flex items-center justify-center rounded-full service-shape {{ $background[$key % 7][0] }}">
                         {!! Storage::get($skill->skill_svg) !!}
 
                     </span>
