@@ -24,10 +24,11 @@
         $background = [
             ['before:bg-[#79DAB9] before:opacity-[0.26]', '#48CDA0'],
             ['before:bg-[#ED5F38] before:opacity-[0.16]', '#ED5F38'],
+            ['before:bg-[#A348CD] before:opacity-[0.16]', '#A348CD'],
             ['before:bg-[#007EFF] before:opacity-[0.16]', '#007EFF'],
             ['before:bg-[#E6BC13] before:opacity-[0.22]', '#E6BC13'],
+            ['before:bg-[#72E3DC] before:opacity-[0.16]', '#72E3DC'],
             ['before:bg-[#ED38D1] before:opacity-[0.16]', '#ED38D1'],
-            ['before:bg-[#A348CD] before:opacity-[0.16]', '#A348CD'],
         ]
         @endphp
 

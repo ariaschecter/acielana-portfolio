@@ -1458,6 +1458,11 @@ button {
   background-color: rgb(163 72 205 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#72E3DC\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(114	227	220 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#ECF1F6\] {
   --tw-bg-opacity: 1;
   background-color: rgb(236 241 246 / var(--tw-bg-opacity));
@@ -1939,6 +1944,11 @@ button {
 .text-\[\#A348CD\] {
   --tw-text-opacity: 1;
   color: rgb(163 72 205 / var(--tw-text-opacity));
+}
+
+.text-\[\#72E3DC\] {
+  --tw-text-opacity: 1;
+  color: rgb(114 227 220 / var(--tw-text-opacity));
 }
 
 .opacity-0 {
@@ -2474,9 +2484,9 @@ button.is-checked {
   transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.dark .offcanvas__close--btn::before, .dark 
-.offcanvas__close--btn::after, .dark 
-.offcanvas__sub_menu_toggle::before, .dark 
+.dark .offcanvas__close--btn::before, .dark
+.offcanvas__close--btn::after, .dark
+.offcanvas__sub_menu_toggle::before, .dark
 .offcanvas__sub_menu_toggle::after {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -2590,7 +2600,7 @@ button.is-checked {
   background-color: rgb(238 95 56 / var(--tw-bg-opacity));
 }
 
-.menu__nav--item:hover svg, 
+.menu__nav--item:hover svg,
 .mobile--menu__nav--item:hover svg {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -2612,8 +2622,8 @@ button.is-checked {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.menu--visible .toggle__navigation--button span, 
-.menu--visible .toggle__navigation--button span::after, 
+.menu--visible .toggle__navigation--button span,
+.menu--visible .toggle__navigation--button span::after,
 .menu--visible .toggle__navigation--button span::before {
   --tw-bg-opacity: 1;
   background-color: rgb(238 95 56 / var(--tw-bg-opacity));
@@ -2668,7 +2678,7 @@ button.is-checked {
   padding-right: calc(1rem + 20px);
 }
 
-.toggle__navigation ul li .toggle__nav--menu--label-wrapper:hover, 
+.toggle__navigation ul li .toggle__nav--menu--label-wrapper:hover,
 .toggle__navigation ul li.active .toggle__nav--menu--label-wrapper {
   --tw-text-opacity: 1;
   color: rgb(238 95 56 / var(--tw-text-opacity));
@@ -3011,6 +3021,12 @@ button.is-checked {
   content: var(--tw-content);
   --tw-bg-opacity: 1;
   background-color: rgb(163 72 205 / var(--tw-bg-opacity));
+}
+
+.before\:bg-\[\#72E3DC\]::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(114 227 220 / var(--tw-bg-opacity));
 }
 
 .before\:opacity-\[0\.26\]::before {
