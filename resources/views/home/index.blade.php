@@ -42,8 +42,8 @@
                     <div class="logo">
                         <a href="{{ url('/') }}">
                             <img class="hidden dark:block" src="{{ asset('frontend/images/logo-dark.png') }}"
-                                alt="">
-                            <img class="dark:hidden" src="{{ asset('frontend/images/logo-sunny.png') }}" alt="">
+                                alt="Acielana Logo">
+                            <img class="dark:hidden" src="{{ asset('frontend/images/logo-sunny.png') }}" alt="Acielana Logo">
                         </a>
                     </div>
                     <div class="flex items-center md:hidden">
@@ -67,10 +67,10 @@
                 <div class="offcanvas__inner">
                     <div class="offcanvas__logo">
                         <a class="offcanvas__logo_link" href="{{ url('/') }}">
-                            <img class="dark:hidden" src="{{ asset('frontend/images/logo.png') }}" alt="Grocee Logo"
+                            <img class="dark:hidden" src="{{ asset('frontend/images/logo-sunny.png') }}" alt="Acielana Logo"
                                 width="158" height="36">
-                            <img class="hidden dark:block" src="{{ asset('frontend/images/logo-light.png') }}"
-                                alt="Grocee Logo" width="158" height="36">
+                            <img class="hidden dark:block" src="{{ asset('frontend/images/logo-dark.png') }}"
+                                alt="Acielana Logo" width="158" height="36">
                         </a>
                         <button class="offcanvas__close--btn dark:text-white" data-offcanvas>close</button>
                     </div>
