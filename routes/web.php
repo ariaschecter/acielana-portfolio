@@ -36,7 +36,7 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
 
-route::controller(HomeController::class)->name('home.')->group( function() {
+route::controller(HomeController::class)->name('home.')->group(function () {
     Route::get('/', 'index')->name('index');
     Route::get('/blog', 'blog')->name('blog');
     Route::get('/portfolio', 'portfolio')->name('portfolio');
@@ -69,4 +69,8 @@ Route::middleware('role:admin', 'auth')->prefix('admin')->name('admin.')->group(
     Route::resource('comment', CommentController::class)->except('create', 'store', 'show', 'edit', 'update');
 });
 
-require __DIR__.'/auth.php';
+Route::get('phpinfo', function () {
+    return phpinfo();
+});
+
+require __DIR__ . '/auth.php';
