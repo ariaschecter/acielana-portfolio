@@ -94,7 +94,7 @@
                         <h3 class="text-[28px] md:text-[22px] font-heebo font-bold text-primary dark:text-white">
                             Email</h3>
                         <span class="text-primary  dark:text-slate-200 text-[22px] md:text-[18px] mt-5">
-                            <a href="mailto:ariaschecter@webmail.umm.ac.id">ariaschecter@webmail.umm.ac.id</a>
+                            <a href="mailto:aria.maulana.m@gmail.com">aria.maulana.m@gmail.com</a>
                         </span>
                     </div>
                 </div>
