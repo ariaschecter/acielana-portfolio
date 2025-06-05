@@ -27,7 +27,7 @@
                     </span>
                 </h3>
                 <p class="mt-[15px] text-paragraph dark:text-slate-200 text-[17px]">
-                    <!-- {!! Str::limit($blog->blog_desc, 75) !!} -->
+                    <!-- Str::limit($blog->blog_desc, 75) -->
                 </p>
             </div>
         </div>
