@@ -21,7 +21,6 @@
                         {{ $pro->project_name }}</h3>
                     <span
                         class="portfolio--sub-title text-[17px] 2xs:hidden transition-all duration-500 translate-y-3">
-                        <!-- {{ Str::limit($pro->project_desc, 75) }} -->
                         {{ mb_strimwidth($pro->project_desc, 0, 75, '...') }}
                     </span>
                 </div>
