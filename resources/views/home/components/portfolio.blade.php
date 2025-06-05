@@ -21,7 +21,7 @@
                         {{ $pro->project_name }}</h3>
                     <span
                         class="portfolio--sub-title text-[17px] 2xs:hidden transition-all duration-500 translate-y-3">
-                        {{ mb_strimwidth($pro->project_desc, 0, 75, '...') }}
+                        <!-- Disini harusnya project desc $pro->project_desc, 0, 75, '...' -->
                     </span>
                 </div>
             </span>
